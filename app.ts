@@ -15,7 +15,9 @@ function printResult(result) {
 
 // printResult(result);
 
-const results: { res: number; print: () => void }[] = [];
+type CalculationResults = { res: number; print: () => void }[];
+
+const results: CalculationResults = [];
 const names = ['Max'];
 
 buttonElement.addEventListener('click', () => {
