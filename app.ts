@@ -9,10 +9,7 @@
 // }
 
 class User {
-  constructor(public name: string, private age: number) {
-    this.name = name;
-    this.age = age;
-  }
+  constructor(public name: string, private age: number) {}
 }
 
 const user = new User('Max', 30);
