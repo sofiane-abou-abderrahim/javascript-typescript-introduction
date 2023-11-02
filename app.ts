@@ -15,6 +15,8 @@ function printResult(result) {
 
 // printResult(result);
 
+let results = [];
+
 buttonElement.addEventListener('click', () => {
   const num1 = +num1Input.value;
   const num2 = +num2Input.value;
@@ -22,5 +24,6 @@ buttonElement.addEventListener('click', () => {
   const resultContainer: { res: number } = {
     res: result
   };
-  printResult(resultContainer.res);
+  results.push(resultContainer);
+  printResult(results);
 });
