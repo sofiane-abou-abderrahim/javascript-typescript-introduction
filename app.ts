@@ -6,7 +6,7 @@ function add(a: number, b: number) {
   return a + b;
 }
 
-function printResult(result, printMode: 'console' | 'alert') {
+function printResult(result, printMode: 'console') {
   if (printMode === 'console') {
     console.log(result);
   } else if (printMode === 'alert') {
