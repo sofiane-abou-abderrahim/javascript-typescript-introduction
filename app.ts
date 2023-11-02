@@ -8,7 +8,7 @@ function add(a: number, b: number) {
 
 type PrintMode = 'console' | 'alert';
 
-function printResult(result, printMode: PrintMode) {
+function printResult(result: string | number, printMode: PrintMode) {
   if (printMode === 'console') {
     console.log(result);
   } else if (printMode === 'alert') {
