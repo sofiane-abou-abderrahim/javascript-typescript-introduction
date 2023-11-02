@@ -72,7 +72,8 @@ interface CalculationContainer {
 //   // print: () => void;
 // }
 
-type CalculationResults = CalculationContainer[];
+// type CalculationResults = CalculationContainer[]; // This is just syntastic sugar for the notation below
+type CalculationResults = Array<CalculationContainer>;
 
 const results: CalculationResults = [];
 const names = ['Max'];
