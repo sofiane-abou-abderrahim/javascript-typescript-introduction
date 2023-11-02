@@ -19,7 +19,7 @@ buttonElement.addEventListener('click', () => {
   const num1 = +num1Input.value;
   const num2 = +num2Input.value;
   const result = add(num1, num2);
-  const resultContainer = {
+  const resultContainer: { res: number } = {
     res: result
   };
   printResult(resultContainer.res);
