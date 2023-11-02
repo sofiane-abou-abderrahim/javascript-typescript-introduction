@@ -1,45 +1,28 @@
+"use strict";
 // class User {
 //   name: string;
 //   private age: number;
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var User = /** @class */ (function () {
-    function User(name, age) {
+class User {
+    constructor(name, age) {
         this.name = name;
         this.age = age;
     }
-    User.prototype.print = function () {
+    print() {
         console.log(this.name);
-    };
-    return User;
-}());
-var Admin = /** @class */ (function (_super) {
-    __extends(Admin, _super);
-    function Admin(name, age, permissions) {
-        var _this = _super.call(this, name, age) || this;
-        _this.permissions = permissions;
-        return _this;
     }
-    return Admin;
-}(User));
-var user = new User('Max', 30);
+}
+class Admin extends User {
+    constructor(name, age, permissions) {
+        super(name, age);
+        this.permissions = permissions;
+    }
+}
+const user = new User('Max', 30);
 console.log(user.name);
-var num1Input = document.getElementById('num1');
-var num2Input = document.getElementById('num2');
-var buttonElement = document.querySelector('button');
+const num1Input = document.getElementById('num1');
+const num2Input = document.getElementById('num2');
+// const buttonElement = document.querySelector('button') as HTMLButtonElement;
+const buttonElement = document.querySelector('button');
 function add(a, b) {
     return a + b;
 }
@@ -56,15 +39,15 @@ function printResult(result, printMode) {
         alert(result);
     }
 }
-var results = [];
-var names = ['Max'];
-buttonElement.addEventListener('click', function () {
-    var num1 = +num1Input.value;
-    var num2 = +num2Input.value;
-    var result = add(num1, num2);
-    var resultContainer = {
+const results = [];
+const names = ['Max'];
+buttonElement.addEventListener('click', () => {
+    const num1 = +num1Input.value;
+    const num2 = +num2Input.value;
+    const result = add(num1, num2);
+    const resultContainer = {
         res: result,
-        print: function () {
+        print() {
             console.log(this.res);
         }
     };

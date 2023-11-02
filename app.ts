@@ -35,7 +35,8 @@ console.log(user.name);
 
 const num1Input = document.getElementById('num1') as HTMLInputElement;
 const num2Input = <HTMLInputElement>document.getElementById('num2');
-const buttonElement = document.querySelector('button') as HTMLButtonElement;
+// const buttonElement = document.querySelector('button') as HTMLButtonElement;
+const buttonElement = document.querySelector('button')!;
 
 function add(a: number, b: number) {
   return a + b;
