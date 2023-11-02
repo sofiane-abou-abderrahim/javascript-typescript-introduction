@@ -1,12 +1,15 @@
 class User {
   name: string;
-  age: number;
+  private age: number;
 
   constructor(name: string, age: number) {
     this.name = name;
     this.age = age;
   }
 }
+
+const user = new User('Max', 30);
+console.log(user.name, user.age);
 
 const num1Input = document.getElementById('num1') as HTMLInputElement;
 const num2Input = <HTMLInputElement>document.getElementById('num2');
