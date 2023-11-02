@@ -12,8 +12,16 @@ interface Greetable {
   name: string;
 }
 
-class User implements Greetable {
+interface Printable {
+  print(): void;
+}
+
+class User implements Greetable, Printable {
   constructor(public name: string, private age: number) {}
+
+  print() {
+    console.log(this.name);
+  }
 }
 
 class Admin extends User {
