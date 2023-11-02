@@ -54,7 +54,7 @@ interface CalculationContainer {
   // print: () => void;
 }
 
-type CalculationResults = { res: number; print: () => void }[];
+type CalculationResults = CalculationContainer[];
 
 const results: CalculationResults = [];
 const names = ['Max'];
