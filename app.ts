@@ -8,7 +8,11 @@
 //   }
 // }
 
-class User {
+interface Greetable {
+  name: string;
+}
+
+class User implements Greetable {
   constructor(public name: string, private age: number) {}
 }
 
@@ -53,6 +57,12 @@ interface CalculationContainer {
   print(): void;
   // print: () => void;
 }
+
+// type CalculationContainer = {
+//   res: number;
+//   print(): void;
+//   // print: () => void;
+// }
 
 type CalculationResults = CalculationContainer[];
 
