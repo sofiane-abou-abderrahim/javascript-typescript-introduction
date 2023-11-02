@@ -12,8 +12,14 @@ class User {
   constructor(public name: string, private age: number) {}
 }
 
+class Admin extends User {
+  constructor(name: string, age: number, private permissions: string[]) {
+    super(name, age);
+  }
+}
+
 const user = new User('Max', 30);
-console.log(user.name, user.age);
+console.log(user.name);
 
 const num1Input = document.getElementById('num1') as HTMLInputElement;
 const num2Input = <HTMLInputElement>document.getElementById('num2');
