@@ -30,5 +30,5 @@ buttonElement.addEventListener('click', () => {
   };
   results.push(resultContainer);
   // results.push(5);
-  printResult(results);
+  results[0].print();
 });
