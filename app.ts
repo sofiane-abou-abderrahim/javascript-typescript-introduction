@@ -15,7 +15,7 @@ function printResult(result) {
 
 // printResult(result);
 
-let results: any[] = [];
+let results: { res: number }[] = [];
 
 buttonElement.addEventListener('click', () => {
   const num1 = +num1Input.value;
@@ -25,5 +25,6 @@ buttonElement.addEventListener('click', () => {
     res: result
   };
   results.push(resultContainer);
+  // results.push(5);
   printResult(results);
 });
