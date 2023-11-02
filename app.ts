@@ -15,7 +15,8 @@ function printResult(result) {
 
 // printResult(result);
 
-let results: { res: number }[] = [];
+const results: { res: number }[] = [];
+const names = ['Max'];
 
 buttonElement.addEventListener('click', () => {
   const num1 = +num1Input.value;
