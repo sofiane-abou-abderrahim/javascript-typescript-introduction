@@ -1,3 +1,10 @@
+class User {
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
 const num1Input = document.getElementById('num1') as HTMLInputElement;
 const num2Input = <HTMLInputElement>document.getElementById('num2');
 const buttonElement = document.querySelector('button') as HTMLButtonElement;
