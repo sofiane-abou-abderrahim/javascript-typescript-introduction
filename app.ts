@@ -48,6 +48,12 @@ function printResult(result: string | number, printMode: OutputMode) {
 
 // printResult(result);
 
+interface CalculationContainer {
+  res: number;
+  print(): void;
+  // print: () => void;
+}
+
 type CalculationResults = { res: number; print: () => void }[];
 
 const results: CalculationResults = [];
