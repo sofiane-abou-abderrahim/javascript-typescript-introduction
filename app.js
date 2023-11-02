@@ -4,12 +4,14 @@ var buttonElement = document.querySelector('button');
 function add(a, b) {
     return a + b;
 }
-function printResult(result) {
-    console.log(result);
+function printResult(result, printMode) {
+    if (printMode === 'console') {
+        console.log(result);
+    }
+    else if (printMode === 'alert') {
+        alert(result);
+    }
 }
-// const result = add(5, 3);
-// let isDone = false;
-// printResult(result);
 var results = [];
 var names = ['Max'];
 buttonElement.addEventListener('click', function () {
@@ -24,5 +26,7 @@ buttonElement.addEventListener('click', function () {
     };
     results.push(resultContainer);
     // results.push(5);
-    results[0].print();
+    // results[0].print();
+    printResult(result, 'console');
+    printResult(result, 'alert');
 });

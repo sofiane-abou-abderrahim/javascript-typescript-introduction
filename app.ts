@@ -6,8 +6,12 @@ function add(a: number, b: number) {
   return a + b;
 }
 
-function printResult(result) {
-  console.log(result);
+function printResult(result, printMode: 'console' | 'alert') {
+  if (printMode === 'console') {
+    console.log(result);
+  } else if (printMode === 'alert') {
+    alert(result);
+  }
 }
 
 // const result = add(5, 3);
@@ -32,5 +36,7 @@ buttonElement.addEventListener('click', () => {
   };
   results.push(resultContainer);
   // results.push(5);
-  results[0].print();
+  // results[0].print();
+  printResult(result, 'console');
+  printResult(result, 'alert');
 });
